@@ -5,8 +5,8 @@ eureka:
   instance:
     hostname: localhost
   client:
-    fetchRegistry: false
-    registerWithEureka: false
+    fetchRegistry: false # eureka server will not call microservices
+    registerWithEureka: false # dont register yourself and expose details into registry of the service Discovery. Other microservices should be find instead. 
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     
